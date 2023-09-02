@@ -1,32 +1,13 @@
 
 
-# word = input("Enter the word: ")
+# * Concatenates inator to the end if the word ends with a consonant otherwise, concatenate -inator instead.
 
-# if word[-1].isalpha() and word[-1].lower() not in "aeiou":
-#     inator = "inator"
-# else:
-#     inator = "-inator"
+# * Adds the word length of the original word to the end, supplied with '000'.
 
-# length = len(word)
-# output = f'{word} {inator} {length}000'
-# print(output)
+word=input("Enter the word: ")
 
-#---------------Another solution"
 
-# word=input("Enter the word: ")
-
-# def function():
-#     if word[-1].isalpha() and word[-1].lower() not in "aeiou":
-#         return f"{word}-inator {len(word) * 1000}"
-#     else:
-#         return f"{word} inator {len(word) * 1000}"
-
-# result = function()
-# print(result)
-
-word = input("Enter the word: ")
-
-if word[-1].isalpha():
+if word and word[-1].isalpha():
     suffix = ' inator' if word[-1].lower() not in 'aeiou' else ' -inator'
     modified_word = f"{word}{suffix} {len(word) * 1000}"
     print(modified_word)
